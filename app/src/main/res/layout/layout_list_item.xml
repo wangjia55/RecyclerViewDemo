@@ -1,0 +1,19 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/image_view_list_item"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="5dp"
+        android:src="@drawable/pic1"/>
+
+    <TextView
+        android:id="@+id/text_view_list_item"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:gravity="center_vertical"
+        android:layout_toRightOf="@+id/image_view_list_item"/>
+
+</RelativeLayout>
