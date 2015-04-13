@@ -1,12 +1,13 @@
 package com.jacob.recyclerview;
 
-import android.support.v4.app.FragmentActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.jacob.recyclerview.animator.RecyclerListActivity;
 import com.jacob.recyclerview.gallery.GalleryAdapter;
 import com.jacob.recyclerview.gallery.GalleryRecyclerView;
 
@@ -17,7 +18,7 @@ import java.util.List;
 public class MainActivity extends FragmentActivity {
 
     private ImageView mImageView;
-    private GalleryRecyclerView mRecyclerView ;
+    private GalleryRecyclerView mRecyclerView;
     private GalleryAdapter mGalleryAdapter;
     private List<Integer> mListData = new ArrayList<>();
 
@@ -27,11 +28,11 @@ public class MainActivity extends FragmentActivity {
         setContentView(R.layout.activity_main);
         mRecyclerView = (GalleryRecyclerView) findViewById(R.id.recyclerView);
         initData();
-        mGalleryAdapter = new GalleryAdapter(this,mListData);
+        mGalleryAdapter = new GalleryAdapter(this, mListData);
         mGalleryAdapter.setOnClickListener(new GalleryAdapter.OnClickListener() {
             @Override
             public void onClick(int position) {
-                System.out.println("position:"+position);
+                System.out.println("position:" + position);
                 mImageView.setImageResource(mListData.get(position));
             }
         });
@@ -53,7 +54,7 @@ public class MainActivity extends FragmentActivity {
     }
 
 
-    private void initData(){
+    private void initData() {
         mListData.add(R.drawable.pic1);
         mListData.add(R.drawable.pic2);
         mListData.add(R.drawable.pic3);
@@ -63,4 +64,8 @@ public class MainActivity extends FragmentActivity {
         mListData.add(R.drawable.pic7);
     }
 
+    public void testAnimator(View view) {
+        Intent intent = new Intent(this, RecyclerListActivity.class);
+        startActivity(intent);
+    }
 }

@@ -7,8 +7,16 @@
        android:layout_width="match_parent"
        android:layout_height="match_parent"
        android:scrollbars="none"
-       android:layout_alignParentBottom="true"
        android:overScrollMode="never"
+       android:layout_above="@+id/button_change"
        android:background="#fff0fcff"/>
+
+    <Button
+        android:id="@+id/button_change"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Change"
+        android:onClick="change"
+        android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>

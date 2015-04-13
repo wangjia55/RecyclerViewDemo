@@ -13,8 +13,16 @@
        android:layout_width="match_parent"
        android:layout_height="120dp"
        android:scrollbars="none"
-       android:layout_alignParentBottom="true"
+       android:layout_above="@+id/button_animator"
        android:overScrollMode="never"
        android:background="#fff0fcff"/>
+
+    <Button
+        android:id="@+id/button_animator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test Animator"
+        android:onClick="testAnimator"
+        android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>
